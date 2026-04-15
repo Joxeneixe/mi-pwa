@@ -6,7 +6,7 @@
     <title>Apps Móviles</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<link rel="manifest" href="./conexion/manifest.json">
+<link rel="manifest" href="manifest.json">
 
 <body>
 
@@ -59,6 +59,10 @@
 <button id="scrollTopBtn">⬆</button>
 
 <script>
+    if  ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+}
+        
     const btn = document.getElementById("scrollTopBtn");
 
     window.onscroll = function() {
